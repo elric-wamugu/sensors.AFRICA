@@ -13,7 +13,7 @@ production React app.
 
 | File | Page |
 | --- | --- |
-| `index.html` | Homepage — blue hero (selected default variant), four monitoring streams, Leaflet network map, 24-h Nairobi trend chart, WHO stats, story showcase, how it works, **floating auto-cycling air-quality widget** |
+| `index.html` | Homepage — blue hero (selected default variant), four monitoring streams, Leaflet network map, 24-h Nairobi trend chart, WHO stats, story showcase, how it works |
 | `air.html` | Air stream — live-reading hero bound to the selected city, 6-city dashboard tabs driving a dynamic 24-h SVG chart, 17-city ranked bars, Leaflet map, 6 health-band guidance cards, hardware spec. Supports `?city=` (e.g. `air.html?city=lagos`) |
 | `water.html` / `sound.html` / `radiation.html` | "Coming soon" stream pages — blue hero with gold pill, planned-measurements card, why-it-matters editorial, notify-me CTA |
 | `data.html` | Open data — embeddable widget cards (map / graph / dial), API + archives, licence & provenance |
@@ -31,6 +31,10 @@ production React app.
 
 ## Notes
 
+- The **floating auto-cycling air-quality widget** appears on every page —
+  injected and initialised by `assets/js/site.js` (opt a page out with
+  `<body data-widget="off">`). It cycles 6 cities every 8 s; dismissing it
+  brings it back after 15 s with the next city.
 - **All readings are illustrative sample data.** Production should bind to the
   live sensors.AFRICA API (`api.sensors.africa`) and derive health bands from
   PM2.5 via US EPA breakpoints (see `saBand()` in `assets/js/site.js`).

@@ -285,15 +285,13 @@
 
 <footer id="site-footer"></footer>
 
-<!-- ================= FLOATING AIR-QUALITY WIDGET ================= -->
-<div id="aq-widget-root"></div>
+<!-- Floating air-quality widget is injected on every page by site.js -->
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="assets/js/site.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     saInitMap('africa-map');
-    saInitWidget(8); // cycles the featured city every 8s (design allows 4–20s)
   });
 </script>
 </body>

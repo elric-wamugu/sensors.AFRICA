@@ -138,7 +138,13 @@
 
   window.saInitWidget = function (cycleSeconds) {
     var host = document.getElementById('aq-widget-root');
-    if (!host) return;
+    if (!host) {
+      host = document.createElement('div');
+      host.id = 'aq-widget-root';
+      document.body.appendChild(host);
+    }
+    if (host.dataset.saWidget) return; // already initialised — avoid double timers
+    host.dataset.saWidget = 'on';
     var idx = 0, visible = true, reappear = null;
 
     function render() {
@@ -202,5 +208,7 @@
       footer.innerHTML = footerHTML(body.getAttribute('data-footer-note') ||
         'Redesign prototype — all readings on this page are illustrative sample data.');
     }
+    /* Floating AQ widget on every page; opt out with <body data-widget="off"> */
+    if (body.getAttribute('data-widget') !== 'off') saInitWidget();
   });
 })();
