@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sensors.AFRICA — Know the air your city breathes</title>
+<meta name="description" content="sensors.AFRICA is a pan-African citizen science initiative using low-cost sensors to monitor air, water and sound pollution — open data for African cities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="assets/css/cfa-tokens.css">
+<link rel="stylesheet" href="assets/css/cfa-site.css">
+<link rel="stylesheet" href="assets/css/prototype.css">
+</head>
+<body data-page="home" data-footer-note="Redesign prototype — all readings on this page are illustrative sample data.">
+
+<header id="site-header"></header>
+
+<!-- ================= HERO (blue) ================= -->
+<section class="hero-blue">
+  <div class="cfa-wrap hero-grid" style="padding-top:96px;padding-bottom:96px">
+    <div>
+      <p class="hero-eyebrow-gold">Citizen science · 16 cities · 6 countries</p>
+      <h1 style="font-size:clamp(44px,5.2vw,68px);line-height:1.02;letter-spacing:-0.03em;color:#ffffff;margin:0 0 24px">Know the air your city breathes.</h1>
+      <p style="font-size:19px;line-height:1.55;color:rgba(255,255,255,0.78);max-width:52ch;margin:0 0 36px">sensors.AFRICA is a pan-African citizen science initiative that uses low-cost sensors to monitor air, water and sound pollution — giving citizens actionable, open data about their cities.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+        <a class="btn-white" href="get-started.html">Join the network →</a>
+        <a class="btn-outline-light" href="data.html">Explore the data</a>
+      </div>
+      <p class="hero-note">Prototype · illustrative data</p>
+    </div>
+    <aside class="reading-card" aria-label="Featured live air quality reading (sample data)">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
+        <span style="font-family:var(--font-display);font-weight:600;font-size:22px;color:#000000">Nairobi, Kenya</span>
+        <span style="display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-tertiary)"><span style="width:8px;height:8px;border-radius:50%;background:#15803d"></span>Live reading</span>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:12px;margin:18px 0 6px">
+        <span style="font-family:var(--font-display);font-weight:700;font-size:72px;line-height:1;letter-spacing:-0.02em;color:#c65d2e">38.4</span>
+        <span style="font-size:13px;line-height:1.4;color:var(--text-tertiary)">µg/m³<br>PM2.5</span>
+      </div>
+      <span style="display:inline-flex;align-items:center;gap:8px;margin-top:6px;font-size:13px;font-weight:500;color:#c65d2e;background:#faf1ec;border-radius:9999px;padding:6px 14px">Unhealthy for sensitive groups</span>
+      <div style="margin-top:24px">
+        <div class="band-meter">
+          <span class="b0"></span><span class="b1"></span><span class="b2"></span><span class="b3"></span><span class="b4"></span><span class="b5"></span>
+          <span class="needle" style="left:42%"></span>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:8px;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-quaternary)"><span>Good</span><span>Hazardous</span></div>
+      </div>
+      <div style="margin-top:20px;padding-top:14px;border-top:1px solid var(--border-secondary);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--text-tertiary)">
+        <span>PM10 <strong style="font-weight:600;color:var(--text-secondary)">51.2 µg/m³</strong></span>
+        <span>SDS011 · Luftdaten network</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ================= FOUR MONITORING STREAMS ================= -->
+<section class="cfa-section tight" style="border-bottom:1px solid var(--border-secondary)">
+  <div class="cfa-wrap">
+    <div class="cfa-section-head" style="margin-bottom:56px">
+      <p class="cfa-section-eyebrow">What we monitor</p>
+      <h2 class="cfa-section-title" style="font-size:44px">Four streams of evidence</h2>
+      <p class="cfa-section-lead">Low-cost, open-source sensors — deployed and hosted by citizens — turning invisible pollution into public record.</p>
+    </div>
+    <div class="grid-4" style="gap:40px">
+      <a class="stream-card" href="air.html" style="border-top:2px solid #000000">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B2AEA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"></path><path d="M9.6 4.6A2 2 0 1 1 11 8H2"></path><path d="M12.6 19.4A2 2 0 1 0 14 16H2"></path></svg>
+        <span style="font:600 20px var(--font-display);color:#000000">Air</span>
+        <span style="font-size:15px;line-height:1.55;color:var(--text-secondary);flex:1">PM2.5 and PM10 particulate readings from Luftdaten-based SDS011 sensors, updated around the clock.</span>
+        <span style="display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#15803d"><span style="width:6px;height:6px;border-radius:50%;background:#15803d"></span>Live network</span>
+      </a>
+      <a class="stream-card" href="water.html" style="border-top:2px solid var(--border-primary)">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B2AEA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"></path><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"></path></svg>
+        <span style="font:600 20px var(--font-display);color:#000000">Water</span>
+        <span style="font-size:15px;line-height:1.55;color:var(--text-secondary);flex:1">Quality and safety indicators for the water that African cities drink, wash with and fish from.</span>
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-quaternary)">Coming soon</span>
+      </a>
+      <a class="stream-card" href="sound.html" style="border-top:2px solid var(--border-primary)">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B2AEA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+        <span style="font:600 20px var(--font-display);color:#000000">Sound</span>
+        <span style="font-size:15px;line-height:1.55;color:var(--text-secondary);flex:1">Noise-pollution levels near flight paths, highways, markets and construction — mapped block by block.</span>
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-quaternary)">Coming soon</span>
+      </a>
+      <a class="stream-card" href="radiation.html" style="border-top:2px solid var(--border-primary)">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B2AEA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="0.5" fill="#0B2AEA"></circle><path d="M7.5 4.2c-.3-.5-.9-.7-1.3-.4A9.98 9.98 0 0 0 2 11c-.1.5.4 1 1 1h5c0-1.5.8-2.8 2-3.4-1.1-1.9-2-3.5-2.5-4.4z"></path><path d="M21 12c.6 0 1-.5 1-1a9.98 9.98 0 0 0-4.2-7.2c-.4-.3-1-.1-1.3.4-.5.9-1.4 2.5-2.5 4.4 1.2.6 2 1.9 2 3.4h5z"></path><path d="M7.5 19.8c-.3.5-.1 1.1.4 1.3a9.98 9.98 0 0 0 8.2 0c.5-.2.7-.8.4-1.3-.5-.9-1.4-2.5-2.5-4.3a3.98 3.98 0 0 1-4 0c-1.1 1.8-2 3.4-2.5 4.3z"></path></svg>
+        <span style="font:600 20px var(--font-display);color:#000000">Radiation</span>
+        <span style="font-size:15px;line-height:1.55;color:var(--text-secondary);flex:1">Background radiation monitoring for early warning and independent verification.</span>
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-quaternary)">Coming soon</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NETWORK MAP ================= -->
+<section class="cfa-section tight" style="border-bottom:1px solid var(--border-secondary);background:var(--bg-secondary)">
+  <div class="cfa-wrap">
+    <div class="cfa-section-head" style="margin-bottom:48px">
+      <p class="cfa-section-eyebrow">The network</p>
+      <h2 class="cfa-section-title" style="font-size:44px">Sixteen cities, six countries — and counting</h2>
+      <p class="cfa-section-lead">Each marker is a monitored city, coloured by its current PM2.5 health band. Tap a marker for the reading.</p>
+    </div>
+    <div style="position:relative;border:1px solid var(--border-primary);border-radius:12px;overflow:hidden;height:540px;background:var(--bg-tertiary)">
+      <div id="africa-map" style="position:absolute;inset:0" aria-label="Map of monitored African cities coloured by air-quality band"></div>
+      <div style="position:absolute;z-index:800;right:16px;top:16px;text-align:right;background:rgba(255,255,255,0.94);border:1px solid var(--border-primary);border-radius:10px;padding:12px 16px">
+        <div style="font:600 22px/1.1 var(--font-display);color:#000000">16<span style="color:var(--text-quaternary)">/</span>6</div>
+        <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-tertiary)">cities / countries</div>
+      </div>
+      <div style="position:absolute;z-index:800;left:16px;bottom:16px;background:rgba(255,255,255,0.94);border:1px solid var(--border-primary);border-radius:10px;padding:14px 16px;font-size:12px;color:var(--text-secondary)">
+        <div style="font-weight:600;letter-spacing:0.1em;text-transform:uppercase;font-size:10px;color:var(--text-tertiary);margin-bottom:9px">PM2.5 health band (µg/m³)</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px 18px">
+          <span style="display:flex;align-items:center;gap:8px;white-space:nowrap"><span style="width:9px;height:9px;border-radius:50%;background:#15803d;flex:none"></span>Good ≤ 12</span>
+          <span style="display:flex;align-items:center;gap:8px;white-space:nowrap"><span style="width:9px;height:9px;border-radius:50%;background:#ca8a04;flex:none"></span>Moderate ≤ 35.4</span>
+          <span style="display:flex;align-items:center;gap:8px;white-space:nowrap"><span style="width:9px;height:9px;border-radius:50%;background:#c65d2e;flex:none"></span>Sensitive ≤ 55.4</span>
+          <span style="display:flex;align-items:center;gap:8px;white-space:nowrap"><span style="width:9px;height:9px;border-radius:50%;background:#dc2626;flex:none"></span>Unhealthy ≤ 150.4</span>
+          <span style="display:flex;align-items:center;gap:8px;white-space:nowrap"><span style="width:9px;height:9px;border-radius:50%;background:#7e22ce;flex:none"></span>Very unhealthy ≤ 250.4</span>
+          <span style="display:flex;align-items:center;gap:8px;white-space:nowrap"><span style="width:9px;height:9px;border-radius:50%;background:#881337;flex:none"></span>Hazardous &gt; 250.4</span>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:14px;font-size:13px;color:var(--text-quaternary)">Sample readings for illustration. Live data credited to the WHO Global Platform on Air Quality &amp; Health.</p>
+  </div>
+</section>
+
+<!-- ================= 24-HOUR TREND ================= -->
+<section class="cfa-section tight" style="border-bottom:1px solid var(--border-secondary)">
+  <div class="cfa-wrap">
+    <div class="cfa-section-head" style="margin-bottom:48px">
+      <p class="cfa-section-eyebrow">A day in the air</p>
+      <h2 class="cfa-section-title" style="font-size:44px">Nairobi, hour by hour</h2>
+      <p class="cfa-section-lead">Rush hours leave fingerprints. PM2.5 climbs with the morning commute, eases at midday, and peaks again as the city drives home.</p>
+    </div>
+    <div style="border:1px solid var(--border-primary);border-radius:12px;padding:26px 22px 16px;background:#fff">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;padding:0 8px">
+        <h3 style="font:600 18px var(--font-display);color:#000000;margin:0">PM2.5 over 24 hours — Nairobi (sample day)</h3>
+        <span style="font-size:12px;color:var(--text-quaternary)">µg/m³ · illustrative data</span>
+      </div>
+      <svg viewBox="0 0 760 360" role="img" style="width:100%;height:auto;display:block;margin-top:10px" aria-label="Line chart of PM2.5 over 24 hours in Nairobi, peaking at 52 micrograms per cubic metre at 6pm, well above the WHO guideline of 10.">
+        <rect x="52" y="244.8" width="612" height="55.2" fill="#15803d" opacity="0.05"></rect>
+        <rect x="52" y="137.2" width="612" height="107.6" fill="#ca8a04" opacity="0.05"></rect>
+        <rect x="52" y="45.2" width="612" height="92" fill="#c65d2e" opacity="0.05"></rect>
+        <rect x="52" y="24" width="612" height="21.2" fill="#dc2626" opacity="0.05"></rect>
+        <g font-size="10" fill="#737373" text-anchor="start" font-family="Inter,sans-serif">
+          <circle cx="674" cy="272" r="3.5" fill="#15803d"></circle><text x="683" y="275.5">Good</text>
+          <circle cx="674" cy="191" r="3.5" fill="#ca8a04"></circle><text x="683" y="194.5">Moderate</text>
+          <circle cx="674" cy="91" r="3.5" fill="#c65d2e"></circle><text x="683" y="94.5">Sensitive</text>
+          <circle cx="674" cy="34" r="3.5" fill="#dc2626"></circle><text x="683" y="37.5">Unhealthy</text>
+        </g>
+        <g stroke="rgba(10,10,10,0.07)" stroke-width="1" shape-rendering="crispEdges">
+          <line x1="52" y1="24" x2="664" y2="24"></line>
+          <line x1="52" y1="116" x2="664" y2="116"></line>
+          <line x1="52" y1="208" x2="664" y2="208"></line>
+        </g>
+        <line x1="52" y1="300" x2="664" y2="300" stroke="rgba(10,10,10,0.2)" stroke-width="1" shape-rendering="crispEdges"></line>
+        <g font-size="11" fill="#737373" text-anchor="end" font-family="Inter,sans-serif">
+          <text x="44" y="304">0</text><text x="44" y="212">20</text><text x="44" y="120">40</text><text x="44" y="28">60</text>
+        </g>
+        <g font-size="11" fill="#737373" text-anchor="middle" font-family="Inter,sans-serif">
+          <text x="52" y="322" text-anchor="start">00:00</text>
+          <text x="211.7" y="322">06:00</text>
+          <text x="371.3" y="322">12:00</text>
+          <text x="531" y="322">18:00</text>
+          <text x="664" y="322" text-anchor="end">23:00</text>
+        </g>
+        <text x="52" y="345" font-size="10" fill="#a3a3a3" font-family="Inter,sans-serif">Hour of day (EAT) · sample values, hourly means</text>
+        <line x1="52" y1="254" x2="664" y2="254" stroke="#15803d" stroke-width="1.5" stroke-dasharray="6 5"></line>
+        <text x="58" y="248" font-size="10.5" fill="#404040" font-weight="500" font-family="Inter,sans-serif">WHO guideline (10 µg/m³)</text>
+        <path fill="#0B2AEA" opacity="0.06" d="M52,300 L52,217.2 L78.6,226.4 L105.2,231 L131.8,235.6 L158.4,240.2 L185,231 L211.7,198.8 L238.3,143.6 L264.9,111.4 L291.5,125.2 L318.1,152.8 L344.7,171.2 L371.3,180.4 L397.9,185 L424.5,175.8 L451.1,162 L477.7,134.4 L504.3,97.6 L531,60.8 L557.6,79.2 L584.2,116 L610.8,148.2 L637.4,180.4 L664,203.4 L664,300 Z"></path>
+        <polyline fill="none" stroke="#0B2AEA" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="52,217.2 78.6,226.4 105.2,231 131.8,235.6 158.4,240.2 185,231 211.7,198.8 238.3,143.6 264.9,111.4 291.5,125.2 318.1,152.8 344.7,171.2 371.3,180.4 397.9,185 424.5,175.8 451.1,162 477.7,134.4 504.3,97.6 531,60.8 557.6,79.2 584.2,116 610.8,148.2 637.4,180.4 664,203.4"></polyline>
+        <circle cx="531" cy="60.8" r="4.5" fill="#0B2AEA" stroke="#fff" stroke-width="2"></circle>
+        <text x="531" y="46" font-size="12" font-weight="700" fill="#0a0a0a" text-anchor="middle" font-family="Inter,sans-serif">52</text>
+        <text x="531" y="33" font-size="9.5" fill="#525252" text-anchor="middle" font-family="Inter,sans-serif">evening peak</text>
+        <circle cx="664" cy="203.4" r="4.5" fill="#0B2AEA" stroke="#fff" stroke-width="2"></circle>
+        <text x="656" y="196" font-size="12" font-weight="700" fill="#0a0a0a" text-anchor="end" font-family="Inter,sans-serif">21</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY IT MATTERS ================= -->
+<section class="cfa-section tight" style="border-bottom:1px solid var(--border-secondary)">
+  <div class="cfa-wrap">
+    <div class="cfa-section-head" style="margin-bottom:56px">
+      <p class="cfa-section-eyebrow">Why it matters</p>
+      <h2 class="cfa-section-title" style="font-size:44px">Air pollution causes 1 in 9 deaths worldwide</h2>
+      <p class="cfa-section-lead">The World Health Organization attributes about seven million premature deaths every year to air pollution — 4.2 million from ambient (outdoor) pollution and 3.8 million from household air. Yet across much of Africa, the street-level data needed to act barely exists. sensors.AFRICA closes that gap with open data anyone can interrogate.</p>
+    </div>
+    <div class="grid-4" style="gap:48px">
+      <div style="display:flex;flex-direction:column;gap:8px;padding-top:24px;border-top:1px solid var(--border-secondary)">
+        <span style="font:600 56px/1 var(--font-display);letter-spacing:-0.025em;color:#000000">36%</span>
+        <span style="font-size:15px;line-height:1.5;color:var(--text-secondary)">of lung-cancer deaths are linked to air pollution</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding-top:24px;border-top:1px solid var(--border-secondary)">
+        <span style="font:600 56px/1 var(--font-display);letter-spacing:-0.025em;color:#000000">35%</span>
+        <span style="font-size:15px;line-height:1.5;color:var(--text-secondary)">of deaths from COPD are linked to air pollution</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding-top:24px;border-top:1px solid var(--border-secondary)">
+        <span style="font:600 56px/1 var(--font-display);letter-spacing:-0.025em;color:#000000">34%</span>
+        <span style="font-size:15px;line-height:1.5;color:var(--text-secondary)">of stroke deaths are linked to air pollution</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding-top:24px;border-top:1px solid var(--border-secondary)">
+        <span style="font:600 56px/1 var(--font-display);letter-spacing:-0.025em;color:#000000">27%</span>
+        <span style="font-size:15px;line-height:1.5;color:var(--text-secondary)">of heart-disease deaths are linked to air pollution</span>
+      </div>
+    </div>
+    <p style="margin-top:40px;font-size:13px;color:var(--text-quaternary)">Figures: World Health Organization.</p>
+  </div>
+</section>
+
+<!-- ================= SHOWCASE / STORIES ================= -->
+<section class="cfa-section tight" style="border-bottom:1px solid var(--border-secondary);background:var(--bg-secondary)">
+  <div class="cfa-wrap">
+    <div class="cfa-section-head" style="margin-bottom:48px">
+      <p class="cfa-section-eyebrow">Showcase</p>
+      <h2 class="cfa-section-title" style="font-size:44px">Stories from the network</h2>
+      <p class="cfa-section-lead">Sensor readings are only the start. Reporting turns them into stories cities can act on.</p>
+    </div>
+    <div class="grid-3" style="gap:32px">
+      <a class="hover-card" href="stories.html" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:0;background:#fff;border:1px solid var(--border-secondary);border-radius:12px;overflow:hidden">
+        <div style="height:180px"><div class="img-slot">Photo — Nakuru air-pollution story<br>(to be supplied)</div></div>
+        <div style="display:flex;flex-direction:column;gap:10px;padding:24px;flex:1">
+          <span style="font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#15803d">4 July 2025</span>
+          <span style="font:600 20px/1.3 var(--font-display);color:#000000">A breath of data: how Nakuru is tackling its air pollution problem</span>
+          <span style="font-size:15px;line-height:1.55;color:var(--text-secondary);flex:1">A blend of low-cost sensors, citizen science and AI is giving Nakuru the tools to fight a growing urban air pollution crisis.</span>
+          <span style="font-size:14px;font-weight:500;color:#0B2AEA">Read the story →</span>
+        </div>
+      </a>
+      <a class="hover-card" href="stories.html" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:0;background:#fff;border:1px solid var(--border-secondary);border-radius:12px;overflow:hidden">
+        <div style="height:180px"><div class="img-slot">Photo — Afri-SET sensor evaluation<br>(to be supplied)</div></div>
+        <div style="display:flex;flex-direction:column;gap:10px;padding:24px;flex:1">
+          <span style="font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#15803d">11 October 2024</span>
+          <span style="font:600 20px/1.3 var(--font-display);color:#000000">Afri-SET completes evaluation of first batch of low-cost air quality sensors</span>
+          <span style="font-size:15px;line-height:1.55;color:var(--text-secondary);flex:1">Afri-SET, a leading air quality sensor evaluation and training facility for West Africa, has completed evaluation of its first cohort of low-cost sensors.</span>
+          <span style="font-size:14px;font-weight:500;color:#0B2AEA">Read the story →</span>
+        </div>
+      </a>
+      <a class="hover-card" href="https://medium.com/@sensors.AFRICA" rel="noopener" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:0;background:#fff;border:1px solid var(--border-secondary);border-radius:12px;overflow:hidden">
+        <div style="height:180px"><div class="img-slot">Photo — rock blasting in Abuja<br>(to be supplied)</div></div>
+        <div style="display:flex;flex-direction:column;gap:10px;padding:24px;flex:1">
+          <span style="font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#15803d">20 July 2024</span>
+          <span style="font:600 20px/1.3 var(--font-display);color:#000000">How indigenous communities bear the brunt of harmful rock blasting in Nigeria</span>
+          <span style="font-size:15px;line-height:1.55;color:var(--text-secondary);flex:1">Ibrahim Maryam, 4, was skipping around her home in Dutse Mpape in Abuja when the earth beneath her began to shudder.</span>
+          <span style="font-size:14px;font-weight:500;color:#0B2AEA">Read the story →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="cfa-section tight" style="border-bottom:1px solid var(--border-secondary)">
+  <div class="cfa-wrap">
+    <div class="cfa-section-head" style="margin-bottom:56px">
+      <p class="cfa-section-eyebrow">How it works</p>
+      <h2 class="cfa-section-title" style="font-size:44px">A weather station for pollution, on your wall</h2>
+    </div>
+    <div class="grid-3" style="gap:40px">
+      <div style="display:flex;flex-direction:column;gap:14px;padding-top:24px;border-top:1px solid var(--border-secondary)">
+        <span style="font:600 14px/1 var(--font-sans);color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#0B2AEA">1</span>
+        <span style="font:600 20px var(--font-display);color:#000000">Get a sensor</span>
+        <span style="font-size:15px;line-height:1.55;color:var(--text-secondary)">We use open-source Luftdaten technology built around the SDS011 particulate sensor — cheap enough for a household, accurate enough for a newsroom.</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;padding-top:24px;border-top:1px solid var(--border-secondary)">
+        <span style="font:600 14px/1 var(--font-sans);color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#0B2AEA">2</span>
+        <span style="font:600 20px var(--font-display);color:#000000">Mount it &amp; connect</span>
+        <span style="font-size:15px;line-height:1.55;color:var(--text-secondary)">Fix it outside a window or on a balcony, connect it to Wi-Fi, and it starts measuring PM2.5 and PM10 in the air around your home.</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;padding-top:24px;border-top:1px solid var(--border-secondary)">
+        <span style="font:600 14px/1 var(--font-sans);color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#0B2AEA">3</span>
+        <span style="font:600 20px var(--font-display);color:#000000">Your data goes public</span>
+        <span style="font-size:15px;line-height:1.55;color:var(--text-secondary)">Readings stream to the open sensors.AFRICA platform — mapped, archived and free for journalists, researchers and neighbours to use.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section style="background:#fff">
+  <div style="text-align:center;padding:112px 24px;max-width:760px;margin:0 auto">
+    <h2 style="font:600 clamp(32px,4.4vw,52px)/1.08 var(--font-display);letter-spacing:-0.025em;color:#000000;margin:0">Your city can't fix what it can't see.</h2>
+    <p style="margin:20px auto 36px;color:var(--text-secondary);max-width:46ch;font-size:17px;line-height:1.6">Host a sensor at your home, school or office and put your street on the map. No lab coat required — just a window ledge and Wi-Fi.</p>
+    <a class="btn primary" href="get-started.html" style="text-decoration:none">Get started — join the network <span class="arr">→</span></a>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+
+<!-- ================= FLOATING AIR-QUALITY WIDGET ================= -->
+<div id="aq-widget-root"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/js/site.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    saInitMap('africa-map');
+    saInitWidget(8); // cycles the featured city every 8s (design allows 4–20s)
+  });
+</script>
+</body>
+</html>
