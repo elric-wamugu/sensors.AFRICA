@@ -1,0 +1,173 @@
+/* ==========================================================================
+   Code for Africa Design System — tokens
+   Built on Untitled UI v8 (Tailwind v4.2 palette) with CfA accent overrides.
+   Adapted for the sensors.AFRICA redesign prototype: Inter is loaded from
+   Google Fonts in each page's <head>; "Inter Display" falls back to Inter.
+   ========================================================================== */
+
+:root {
+  /* ============ BASE — Tailwind v4.2 Neutral (gray) ============ */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --gray-25:  #fafafa;
+  --gray-50:  #f5f5f5;
+  --gray-100: #e5e5e5;
+  --gray-200: #d4d4d4;
+  --gray-300: #a3a3a3;
+  --gray-400: #737373;
+  --gray-500: #525252;
+  --gray-600: #404040;
+  --gray-700: #262626;
+  --gray-800: #171717;
+  --gray-900: #0a0a0a;
+
+  /* ============ BRAND — CfA blue (overrides Untitled UI default violet) ============ */
+  --brand-25:  #f5f6ff;
+  --brand-50:  #eceffe;
+  --brand-100: #d1d7fc;
+  --brand-200: #a8b3f8;
+  --brand-300: #7f8ef4;
+  --brand-400: #5a70f4;
+  --brand-500: #2a46f0;
+  --brand-600: #0B2AEA;  /* CfA blue — primary */
+  --brand-700: #0820b8;
+  --brand-800: #061887;
+  --brand-900: #040f5a;
+
+  /* ============ CfA BRAND (official) ============ */
+  --cfa-blue:       #0B2AEA;   /* official CfA blue — primary button fill, links */
+  --cfa-blue-hover: #0820b8;   /* 15% darker for hover */
+  --cfa-blue-deep:  #061887;   /* pressed / dark surfaces */
+  --cfa-black:      #000000;   /* official CfA black — buttons, headings on light */
+  --cfa-navy:       #0B2AEA;   /* alias */
+  --cfa-navy-deep:  #061887;
+  --cfa-gold:       #ffda44;   /* accent — highlight */
+  --cfa-red:        #d80027;   /* accent — alert / investigative flag */
+
+  /* ============ SEMANTIC — SUCCESS / WARNING / ERROR (Tailwind) ============ */
+  --success-50:  #f0fdf4; --success-500: #16a34a; --success-600: #15803d; --success-700: #166534;
+  --warning-50:  #fffbeb; --warning-500: #eab308; --warning-600: #ca8a04; --warning-700: #a16207;
+  --error-50:    #fef2f2; --error-500:   #dc2626; --error-600:   #b91c1c; --error-700:   #991b1b;
+
+  /* ============ TEXT (semantic, per Untitled UI) ============ */
+  --text-primary:     var(--gray-900);
+  --text-secondary:   var(--gray-700);
+  --text-tertiary:    var(--gray-500);
+  --text-quaternary:  var(--gray-400);
+  --text-disabled:    var(--gray-300);
+  --text-placeholder: var(--gray-400);
+  --text-brand:       var(--brand-700);
+  --text-error:       var(--error-600);
+  --text-success:     var(--success-600);
+  --text-warning:     var(--warning-700);
+  --text-white:       var(--color-white);
+
+  /* ============ BACKGROUND ============ */
+  --bg-primary:    var(--color-white);
+  --bg-secondary:  var(--gray-25);
+  --bg-tertiary:   var(--gray-50);
+  --bg-quaternary: var(--gray-100);
+  --bg-brand-solid:        var(--brand-600);
+  --bg-brand-solid-hover:  var(--brand-700);
+  --bg-brand-subtle:       var(--brand-50);
+  --bg-inverted:  var(--gray-900);
+
+  /* ============ BORDER ============ */
+  --border-primary:   var(--gray-200);
+  --border-secondary: var(--gray-100);
+  --border-tertiary:  var(--gray-50);
+  --border-disabled:  var(--gray-200);
+  --border-brand:     var(--brand-600);
+  --border-error:     var(--error-500);
+
+  /* ---- Back-compat aliases (site.css uses these) ---- */
+  --fg: var(--text-primary); --fg-1: var(--text-primary); --fg-2: var(--text-secondary); --fg-3: var(--text-tertiary);
+  --bg: var(--bg-primary); --bg-subtle: var(--bg-tertiary); --bg-muted: var(--bg-secondary);
+  --border: var(--border-secondary); --border-strong: var(--border-primary);
+  --cfa-blue-900: var(--cfa-blue-deep); --cfa-blue-800: var(--cfa-blue-hover); --cfa-blue-700: var(--cfa-blue); --cfa-blue-600: #2a46f0; --cfa-blue-500: #5a70f4; --cfa-blue-100: #d1d7fc; --cfa-blue-50: #eceffe;
+  --cfa-ink-900: var(--gray-900); --cfa-ink-800: var(--gray-800); --cfa-ink-700: var(--gray-700); --cfa-ink-600: var(--gray-600); --cfa-ink-500: var(--gray-500); --cfa-ink-400: var(--gray-400); --cfa-ink-300: var(--gray-300); --cfa-ink-200: var(--gray-200); --cfa-ink-100: var(--gray-100); --cfa-ink-50: var(--gray-50); --cfa-ink-25: var(--gray-25); --cfa-white: var(--color-white);
+  --cfa-gold-500: var(--cfa-gold); --cfa-gold-600: #f2c200;
+  --cfa-red-600: var(--cfa-red); --cfa-red-700: #b00020;
+  --cfa-green-600: var(--success-600);
+  --cfa-terra-500: #c65d2e;
+  --fg-brand: var(--text-brand); --fg-link: var(--text-brand);
+
+  /* ============ RADIUS ============ */
+  --radius-none: 0; --radius-xxs: 2px; --radius-xs: 4px; --radius-sm: 6px;
+  --radius-md: 8px; --radius-lg: 10px; --radius-xl: 12px; --radius-2xl: 16px;
+  --radius-3xl: 20px; --radius-4xl: 24px; --radius-full: 9999px; --radius-pill: 9999px;
+
+  /* ============ SPACING — 4px base ============ */
+  --space-0: 0; --space-0-5: 2px; --space-1: 4px; --space-1-5: 6px; --space-2: 8px;
+  --space-3: 12px; --space-4: 16px; --space-5: 20px; --space-6: 24px;
+  --space-8: 32px; --space-10: 40px; --space-12: 48px; --space-16: 64px;
+  --space-20: 80px; --space-24: 96px;
+
+  /* ============ SHADOWS — Untitled UI scale ============ */
+  --shadow-xs: 0 1px 2px rgba(10,10,10,0.05);
+  --shadow-sm: 0 1px 3px rgba(16,24,40,0.10), 0 1px 2px rgba(16,24,40,0.06);
+  --shadow-md: 0 4px 8px -2px rgba(16,24,40,0.10), 0 2px 4px -2px rgba(16,24,40,0.06);
+  --shadow-lg: 0 12px 16px -4px rgba(16,24,40,0.08), 0 4px 6px -2px rgba(16,24,40,0.03);
+  --shadow-xl: 0 20px 24px -4px rgba(16,24,40,0.08), 0 8px 8px -4px rgba(16,24,40,0.03);
+  --shadow-2xl: 0 24px 48px -12px rgba(16,24,40,0.18);
+  --shadow-3xl: 0 32px 64px -12px rgba(16,24,40,0.14);
+  --focus-ring-brand: 0 0 0 4px rgba(11,42,234,0.24);
+  --focus-ring-error: 0 0 0 4px rgba(220,38,38,0.24);
+  --shadow-ring-brand: var(--focus-ring-brand);
+  --shadow-ring-focus: var(--focus-ring-brand);
+
+  /* ============ TYPE — FAMILIES ============ */
+  --font-sans:    "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Inter Display", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    "Roboto Mono", ui-monospace, SFMono-Regular, "Menlo", monospace;
+
+  /* ============ TYPE — Untitled UI scale ============ */
+  /* Display */
+  --fs-display-2xl: 72px;  --lh-display-2xl: 90px;  --ls-display-2xl: -0.02em;
+  --fs-display-xl:  60px;  --lh-display-xl:  72px;  --ls-display-xl:  -0.02em;
+  --fs-display-lg:  48px;  --lh-display-lg:  60px;  --ls-display-lg:  -0.02em;
+  --fs-display-md:  36px;  --lh-display-md:  44px;  --ls-display-md:  -0.02em;
+  --fs-display-sm:  30px;  --lh-display-sm:  38px;
+  --fs-display-xs:  24px;  --lh-display-xs:  32px;
+  /* Text */
+  --fs-text-xl: 20px;  --lh-text-xl: 30px;
+  --fs-text-lg: 18px;  --lh-text-lg: 28px;
+  --fs-text-md: 16px;  --lh-text-md: 24px;
+  --fs-text-sm: 14px;  --lh-text-sm: 20px;
+  --fs-text-xs: 12px;  --lh-text-xs: 18px;
+
+  /* ============ MOTION ============ */
+  --ease-standard: cubic-bezier(0.2, 0.6, 0.2, 1);
+  --ease-enter:    cubic-bezier(0.0, 0.0, 0.2, 1);
+  --ease-exit:     cubic-bezier(0.4, 0.0, 1, 1);
+  --dur-1: 100ms; --dur-2: 180ms; --dur-3: 240ms; --dur-4: 320ms;
+}
+
+/* ---------- Defaults ---------- */
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-text-md); line-height: var(--lh-text-md);
+  color: var(--text-primary); background: var(--bg-primary); margin: 0;
+}
+
+/* Untitled UI headings use Inter Display for 36px+ and the tight -0.02em track */
+h1, .cfa-h1 { font-family: var(--font-display); font-weight: 600; font-size: var(--fs-display-lg); line-height: var(--lh-display-lg); letter-spacing: var(--ls-display-lg); color: var(--text-primary); margin: 0; text-wrap: balance; }
+h2, .cfa-h2 { font-family: var(--font-display); font-weight: 600; font-size: var(--fs-display-md); line-height: var(--lh-display-md); letter-spacing: var(--ls-display-md); color: var(--text-primary); margin: 0; text-wrap: balance; }
+h3, .cfa-h3 { font-family: var(--font-display); font-weight: 600; font-size: var(--fs-display-sm); line-height: var(--lh-display-sm); letter-spacing: -0.01em; color: var(--text-primary); margin: 0; }
+h4, .cfa-h4 { font-family: var(--font-sans); font-weight: 600; font-size: var(--fs-display-xs); line-height: var(--lh-display-xs); color: var(--text-primary); margin: 0; }
+h5, .cfa-h5 { font-family: var(--font-sans); font-weight: 600; font-size: var(--fs-text-xl); line-height: var(--lh-text-xl); color: var(--text-primary); margin: 0; }
+h6, .cfa-h6 { font-family: var(--font-sans); font-weight: 600; font-size: var(--fs-text-lg); line-height: var(--lh-text-lg); color: var(--text-primary); margin: 0; }
+
+p, .cfa-p { font-size: var(--fs-text-md); line-height: var(--lh-text-md); color: var(--text-secondary); margin: 0; text-wrap: pretty; }
+.cfa-lead { font-size: var(--fs-text-xl); line-height: var(--lh-text-xl); color: var(--text-secondary); }
+.cfa-small { font-size: var(--fs-text-sm); line-height: var(--lh-text-sm); color: var(--text-secondary); }
+.cfa-eyebrow { font-family: var(--font-sans); font-weight: 600; font-size: 12px; line-height: 18px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-brand); }
+
+code, kbd, samp, pre, .cfa-mono { font-family: var(--font-mono); font-size: 0.95em; }
+code { background: var(--bg-tertiary); padding: 1px 6px; border-radius: var(--radius-xs); color: var(--gray-800); }
+
+a, .cfa-link { color: var(--text-brand); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+a:hover { color: var(--brand-700); }
+
+hr { border: 0; border-top: 1px solid var(--border-secondary); }

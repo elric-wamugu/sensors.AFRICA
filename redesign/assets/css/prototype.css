@@ -1,0 +1,90 @@
+/* sensors.AFRICA redesign prototype — shared page styles.
+   Layers on cfa-tokens.css + cfa-site.css. Values from the design handoff. */
+
+body{margin:0;background:#fff;color:#0a0a0a;font-family:"Inter",ui-sans-serif,system-ui,sans-serif}
+a{color:#0B2AEA}
+a:hover{color:#0820b8}
+.leaflet-container{font-family:"Inter",system-ui,sans-serif}
+
+/* ---- Header nav (shared spec) ---- */
+.cfa-nav a.active{color:#0B2AEA;font-weight:600}
+.nav-live-dot{width:7px;height:7px;border-radius:50%;background:#15803d;display:inline-block}
+.cfa-brand img{height:34px;display:block;filter:invert(1)} /* white logo inverted on white header — production should use a dark logo asset */
+
+/* ---- Blue hero shared bits ---- */
+.hero-blue{background:#0B2AEA}
+.hero-eyebrow-gold{margin:0 0 20px;font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#ffda44}
+.hero-note{margin:28px 0 0;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.45)}
+.btn-white{text-decoration:none;font:500 15px var(--font-sans);padding:12px 20px;border-radius:9999px;background:#ffffff;color:#0B2AEA;display:inline-flex;align-items:center;gap:6px;transition:background var(--dur-2) var(--ease-standard)}
+.btn-white:hover{background:#eceffe;color:#0B2AEA}
+.btn-outline-light{text-decoration:none;font:500 15px var(--font-sans);padding:12px 20px;border-radius:9999px;border:1px solid rgba(255,255,255,0.4);color:#ffffff;display:inline-flex;align-items:center;gap:6px;transition:border-color var(--dur-2) var(--ease-standard)}
+.btn-outline-light:hover{border-color:#ffffff;color:#ffffff}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr);gap:64px;align-items:center;padding-top:88px;padding-bottom:88px}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px;padding-top:64px;padding-bottom:64px}}
+
+/* ---- Featured reading card (blue hero) ---- */
+.reading-card{background:#fff;border-radius:12px;padding:28px 28px 24px;box-shadow:0 24px 48px -12px rgba(4,15,90,0.45)}
+
+/* ---- Six-band PM2.5 meter ---- */
+.band-meter{position:relative;display:flex;height:6px;border-radius:3px;overflow:visible}
+.band-meter span{flex:1}
+.band-meter .b0{background:#15803d;border-radius:3px 0 0 3px}
+.band-meter .b1{background:#ca8a04}
+.band-meter .b2{background:#c65d2e}
+.band-meter .b3{background:#dc2626}
+.band-meter .b4{background:#7e22ce}
+.band-meter .b5{background:#881337;border-radius:0 3px 3px 0}
+.band-meter .needle{position:absolute;top:-4px;width:3px;height:14px;border-radius:2px;background:#0a0a0a;box-shadow:0 0 0 2px #fff;flex:none}
+
+/* ---- Card hover (house easing) ---- */
+.hover-card{transition:box-shadow 180ms cubic-bezier(0.2,0.6,0.2,1),transform 180ms cubic-bezier(0.2,0.6,0.2,1)}
+.hover-card:hover{box-shadow:0 4px 8px -2px rgba(16,24,40,0.10);transform:translateY(-2px)}
+.hover-shadow{transition:box-shadow 180ms cubic-bezier(0.2,0.6,0.2,1)}
+.hover-shadow:hover{box-shadow:0 4px 8px -2px rgba(16,24,40,0.10)}
+
+/* ---- Stream cards (homepage) ---- */
+.stream-card{text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:14px;padding-top:24px;transition:border-top-color 180ms cubic-bezier(0.2,0.6,0.2,1)}
+.stream-card:hover{border-top-color:#0B2AEA !important;color:inherit}
+
+/* ---- Image slot placeholder (real photography to be supplied) ---- */
+.img-slot{width:100%;height:100%;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;box-sizing:border-box;background:
+  repeating-linear-gradient(45deg,#f5f5f5 0,#f5f5f5 12px,#fafafa 12px,#fafafa 24px);color:#a3a3a3;font:500 12px/1.5 var(--font-sans);letter-spacing:0.04em}
+
+/* ---- Floating AQ widget ---- */
+@keyframes widgetIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.aq-widget{position:fixed;right:24px;bottom:24px;z-index:2000;width:280px;background:#ffffff;border:1px solid var(--border-primary);border-radius:12px;box-shadow:0 20px 24px -4px rgba(16,24,40,0.08),0 8px 8px -4px rgba(16,24,40,0.03);padding:20px 20px 16px;animation:widgetIn 320ms cubic-bezier(0.2,0.6,0.2,1)}
+.aq-widget .band-meter{height:5px;margin-top:16px}
+.aq-widget .band-meter .needle{top:-3px;height:11px}
+.aq-widget-close{background:transparent;border:0;cursor:pointer;padding:4px;color:#737373;line-height:0}
+.aq-widget-close:hover{color:#0a0a0a}
+
+/* ---- Footer (shared spec: pure black) ---- */
+.sa-footer{background:#000000;color:#fff;padding:64px 0 40px}
+.sa-footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.sa-footer-brand img{height:30px;display:block}
+.sa-footer-mission{font-size:14px;line-height:1.6;color:rgba(255,255,255,0.65);margin:14px 0 0;max-width:38ch}
+.sa-footer h4{font:600 11px var(--font-sans);letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin:0 0 16px}
+.sa-footer-links{display:flex;flex-direction:column;gap:9px}
+.sa-footer-links a{font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 180ms cubic-bezier(0.2,0.6,0.2,1)}
+.sa-footer-links a:hover{color:#ffffff}
+.sa-footer-bottom{margin-top:52px;padding-top:22px;border-top:1px solid rgba(255,255,255,0.14);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12px;color:rgba(255,255,255,0.5)}
+@media (max-width:900px){.sa-footer-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.sa-footer-grid{grid-template-columns:1fr}}
+
+/* ---- Generic grids that collapse on small screens ---- */
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr)}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr)}
+.grid-2{display:grid;grid-template-columns:1fr 1fr}
+.grid-5{display:grid;grid-template-columns:repeat(5,1fr)}
+@media (max-width:1000px){.grid-4,.grid-5{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.grid-4,.grid-3,.grid-2,.grid-5{grid-template-columns:1fr}}
+
+/* ---- Key-value spec rows ---- */
+.spec-row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--border-secondary);font-size:14px}
+.spec-row:first-child{border-top:0}
+.spec-row .k{color:var(--text-tertiary)}
+.spec-row .v{color:#0a0a0a;font-weight:500}
+
+/* ---- Code / snippet blocks ---- */
+.snippet{margin:0;background:var(--gray-25);border:1px solid var(--border-secondary);border-radius:8px;padding:12px 14px;font:12px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--text-secondary);overflow-x:auto}
+.snippet-label{font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:6px}

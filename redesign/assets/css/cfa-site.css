@@ -1,0 +1,76 @@
+/* Marketing site — Stripe-inspired restraint. Layers on cfa-tokens.css */
+
+/* ---- Page base ---- */
+body{background:#fff;color:var(--fg-1)}
+.cfa-wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+@media (max-width:720px){.cfa-wrap{padding:0 20px}}
+
+/* ---- Buttons ---- */
+.btn{font:500 15px/1 var(--font-sans);padding:10px 16px;border-radius:999px;border:1px solid transparent;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:background var(--dur-2) var(--ease-standard),color var(--dur-2) var(--ease-standard),border-color var(--dur-2) var(--ease-standard);white-space:nowrap}
+.btn.primary{background:var(--brand-600);color:#fff}
+.btn.primary:hover{background:var(--brand-700)}
+.btn.dark{background:var(--cfa-black);color:#fff}
+.btn.dark:hover{background:var(--gray-800)}
+.btn.secondary{background:transparent;color:var(--fg-1);border-color:var(--border)}
+.btn.secondary:hover{border-color:var(--border-strong)}
+.btn.ghost{background:transparent;color:var(--fg-1);padding:10px 0}
+.btn.ghost:hover{color:var(--brand-600)}
+.btn.ghost-light{background:transparent;color:#fff;padding:10px 0}
+.btn.ghost-light:hover{color:var(--cfa-gold)}
+.btn.sm{padding:7px 14px;font-size:14px}
+.btn .arr{display:inline-block;transition:transform var(--dur-2) var(--ease-standard)}
+.btn:hover .arr{transform:translateX(2px)}
+
+/* ---- Header ---- */
+.cfa-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.88);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--border)}
+.cfa-header-inner{display:flex;align-items:center;gap:40px;padding:18px 0}
+.cfa-brand{display:inline-flex;margin-right:8px}
+.cfa-nav{display:flex;gap:28px;flex:1}
+.cfa-nav a{font:500 15px var(--font-sans);color:var(--fg-1);text-decoration:none;transition:color var(--dur-2)}
+.cfa-nav a:hover{color:var(--brand-600)}
+.cfa-header-cta{display:flex;gap:14px;align-items:center}
+.cfa-link-sm{font:500 15px var(--font-sans);color:var(--fg-1);text-decoration:none}
+.cfa-link-sm:hover{color:var(--brand-600)}
+.cfa-burger{display:none;background:transparent;border:0;cursor:pointer;padding:6px;margin-left:auto}
+.cfa-mobile-nav{display:none;flex-direction:column;padding:12px 0 18px;border-top:1px solid var(--border)}
+.cfa-mobile-nav a{padding:12px 0;font-size:16px;color:var(--fg-1);text-decoration:none}
+@media (max-width:820px){
+  .cfa-nav,.cfa-header-cta{display:none}
+  .cfa-burger{display:block}
+  .cfa-header.open .cfa-mobile-nav{display:flex}
+}
+
+/* ---- Hero ---- */
+.cfa-hero{background:#fff;border-bottom:1px solid var(--border);overflow:hidden;position:relative}
+.cfa-hero-inner{padding:120px 0 132px;max-width:980px}
+.cfa-hero-eyebrow{font:500 15px var(--font-sans);color:var(--brand-600);margin:0 0 24px;display:inline-flex;align-items:center;gap:10px}
+.cfa-hero-eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--brand-600)}
+.cfa-hero-title{font-family:var(--font-display);font-weight:600;font-size:96px;line-height:.96;letter-spacing:-.035em;margin:0 0 32px;text-wrap:balance;color:var(--cfa-black)}
+.cfa-hero-title em{font-style:normal;color:var(--brand-600)}
+.cfa-hero-lead{font-size:22px;line-height:32px;color:var(--fg-2);max-width:640px;margin:0 0 40px;font-weight:400}
+.cfa-hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+@media (max-width:820px){.cfa-hero-title{font-size:56px}.cfa-hero-inner{padding:72px 0 80px}.cfa-hero-lead{font-size:18px;line-height:28px}}
+
+/* ---- Stats ---- */
+.cfa-stats{border-bottom:1px solid var(--border);padding:72px 0}
+.cfa-stats-eyebrow{font:500 13px var(--font-sans);color:var(--fg-3);text-transform:uppercase;letter-spacing:.12em;margin:0 0 40px}
+.cfa-stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:48px}
+.cfa-stat{display:flex;flex-direction:column;gap:8px}
+.cfa-stat-n{font:600 64px/1 var(--font-display);letter-spacing:-.025em;color:var(--cfa-black)}
+.cfa-stat-l{font:400 15px/1.5 var(--font-sans);color:var(--fg-2);max-width:180px}
+@media (max-width:820px){.cfa-stats-grid{grid-template-columns:repeat(2,1fr);gap:32px}.cfa-stat-n{font-size:48px}}
+
+/* ---- Section header ---- */
+.cfa-section{padding:120px 0;border-bottom:1px solid var(--border)}
+.cfa-section.tight{padding:96px 0}
+.cfa-section-head{max-width:720px;margin:0 0 72px}
+.cfa-section-eyebrow{font:500 13px var(--font-sans);color:var(--brand-600);text-transform:uppercase;letter-spacing:.12em;margin:0 0 20px}
+.cfa-section-title{font:600 56px/1.05 var(--font-display);letter-spacing:-.025em;margin:0 0 20px;color:var(--cfa-black);text-wrap:balance}
+.cfa-section-lead{font:400 19px/1.55 var(--font-sans);color:var(--fg-2);margin:0;max-width:600px}
+@media (max-width:820px){.cfa-section{padding:80px 0}.cfa-section-title{font-size:36px}.cfa-section-lead{font-size:17px}}
+
+/* ---- Modal ---- */
+.cfa-modal-backdrop{position:fixed;inset:0;background:rgba(10,10,10,.5);backdrop-filter:blur(4px);z-index:50;display:flex;align-items:center;justify-content:center;padding:24px}
+.cfa-modal{background:#fff;border-radius:16px;max-width:640px;width:100%;max-height:80vh;overflow:auto;padding:48px;position:relative;box-shadow:0 40px 80px -20px rgba(0,0,0,.3)}
+.cfa-modal-close{position:absolute;top:20px;right:20px;background:transparent;border:0;padding:6px;cursor:pointer;border-radius:6px}
+.cfa-modal-close:hover{background:var(--bg-subtle)}

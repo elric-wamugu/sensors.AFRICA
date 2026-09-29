@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data — sensors.AFRICA</title>
+<meta name="description" content="Open, real-time and historical air-quality data for African cities — embeddable widgets, a public API and downloadable archives from sensors.AFRICA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/cfa-tokens.css">
+<link rel="stylesheet" href="assets/css/cfa-site.css">
+<link rel="stylesheet" href="assets/css/prototype.css">
+</head>
+<body data-page="data" data-footer-note="Redesign prototype — all readings on this page are illustrative sample data.">
+
+<header id="site-header"></header>
+
+<!-- ================= HERO (blue) ================= -->
+<section class="hero-blue">
+  <div class="cfa-wrap" style="max-width:980px;padding-top:96px;padding-bottom:96px">
+    <p class="hero-eyebrow-gold">Data · open by default</p>
+    <h1 style="font-size:clamp(44px,5.4vw,72px);line-height:1.0;letter-spacing:-0.03em;color:#ffffff;margin:0 0 24px">Open data. Take it, use it, publish with it.</h1>
+    <p style="font-size:19px;line-height:1.55;color:rgba(255,255,255,0.78);max-width:58ch;margin:0 0 40px">sensors.AFRICA publishes open, real-time and historical air-quality data — PM2.5 and PM10 readings in µg/m³ — for African cities. Journalists chase leads with it, researchers model with it, and civic watchdogs hold polluters to account with it. Everything here is free to use: live widgets you can embed anywhere, a public API, and downloadable archives.</p>
+    <div style="display:flex;gap:40px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.2)">
+      <div><div style="font:600 17px var(--font-display);color:#ffffff">PM2.5 / PM10</div><div style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:4px">particulates, µg/m³</div></div>
+      <div><div style="font:600 17px var(--font-display);color:#ffffff">Real-time</div><div style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:4px">live sensor readings</div></div>
+      <div><div style="font:600 17px var(--font-display);color:#ffffff">Historical</div><div style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:4px">downloadable archives</div></div>
+      <div><div style="font:600 17px var(--font-display);color:#ffffff">Open</div><div style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:4px">free to reuse, with credit</div></div>
+    </div>
+    <p style="margin:28px 0 0;font-size:13px;color:rgba(255,255,255,0.55)">Air-quality data credited to the WHO Global Platform on Air Quality &amp; Health · Prototype — illustrative previews</p>
+  </div>
+</section>
+
+<!-- ================= EMBEDDABLE WIDGETS ================= -->
+<section class="cfa-section tight" id="embeds" style="border-bottom:1px solid var(--border-secondary)">
+  <div class="cfa-wrap">
+    <div class="cfa-section-head" style="margin-bottom:48px">
+      <p class="cfa-section-eyebrow">Embeddable widgets</p>
+      <h2 class="cfa-section-title" style="font-size:44px">Put live air quality on your own site</h2>
+      <p class="cfa-section-lead">Anyone — a newsroom, a school, a blog — can embed our live map, graph or dial with one iframe. No key, no sign-up. Swap the <code>city</code> parameter for your own.</p>
+    </div>
+    <div class="grid-3" style="gap:32px">
+      <article style="display:flex;flex-direction:column;gap:14px;border:1px solid var(--border-primary);border-radius:12px;padding:24px;background:#fff">
+        <h3 style="font:600 20px var(--font-display);color:#000000;margin:0">Live map</h3>
+        <p style="font-size:14px;line-height:1.55;color:var(--text-secondary);margin:0">An interactive city map with every sensor node coloured by its current health band.</p>
+        <div>
+          <div class="snippet-label">Widget URL</div>
+          <pre class="snippet">https://sensors.africa/embeded/air/map?city=nairobi</pre>
+        </div>
+        <div style="flex:1">
+          <div class="snippet-label">Iframe snippet</div>
+          <pre class="snippet">&lt;iframe
+  src="https://sensors.africa/embeded/air/map?city=nairobi"
+  width="100%" height="400"
+  frameborder="0"&gt;
+&lt;/iframe&gt;</pre>
+        </div>
+      </article>
+      <article style="display:flex;flex-direction:column;gap:14px;border:1px solid var(--border-primary);border-radius:12px;padding:24px;background:#fff">
+        <h3 style="font:600 20px var(--font-display);color:#000000;margin:0">Live graph</h3>
+        <p style="font-size:14px;line-height:1.55;color:var(--text-secondary);margin:0">A rolling PM2.5/PM10 trend chart for the city, updated as readings arrive.</p>
+        <div>
+          <div class="snippet-label">Widget URL</div>
+          <pre class="snippet">https://sensors.africa/embeded/air/graph?city=nairobi</pre>
+        </div>
+        <div style="flex:1">
+          <div class="snippet-label">Iframe snippet</div>
+          <pre class="snippet">&lt;iframe
+  src="https://sensors.africa/embeded/air/graph?city=nairobi"
+  width="100%" height="340"
+  frameborder="0"&gt;
+&lt;/iframe&gt;</pre>
+        </div>
+      </article>
+      <article style="display:flex;flex-direction:column;gap:14px;border:1px solid var(--border-primary);border-radius:12px;padding:24px;background:#fff">
+        <h3 style="font:600 20px var(--font-display);color:#000000;margin:0">Live dial</h3>
+        <p style="font-size:14px;line-height:1.55;color:var(--text-secondary);margin:0">A compact at-a-glance gauge showing the city's current reading on the health scale.</p>
+        <div>
+          <div class="snippet-label">Widget URL</div>
+          <pre class="snippet">https://sensors.africa/embeded/air/dial?city=nairobi</pre>
+        </div>
+        <div style="flex:1">
+          <div class="snippet-label">Iframe snippet</div>
+          <pre class="snippet">&lt;iframe
+  src="https://sensors.africa/embeded/air/dial?city=nairobi"
+  width="300" height="250"
+  frameborder="0"&gt;
+&lt;/iframe&gt;</pre>
+        </div>
+      </article>
+    </div>
+    <p style="margin-top:24px;font-size:13px;color:var(--text-tertiary)">Replace <code>city=nairobi</code> with any monitored city — e.g. <code>lagos</code>, <code>accra</code>, <code>dar-es-salaam</code> — to embed its live view. Widgets are served from sensors.africa and update automatically.</p>
+  </div>
+</section>
+
+<!-- ================= API + ARCHIVES ================= -->
+<section class="cfa-section tight" id="api" style="border-bottom:1px solid var(--border-secondary);background:var(--bg-secondary)">
+  <div class="cfa-wrap">
+    <div class="cfa-section-head" style="margin-bottom:48px">
+      <p class="cfa-section-eyebrow">For developers &amp; researchers</p>
+      <h2 class="cfa-section-title" style="font-size:44px">The API and the archives</h2>
+      <p class="cfa-section-lead">Widgets are the front door. Behind them sit a public API for live queries and bulk archives for serious analysis.</p>
+    </div>
+    <div class="grid-2" style="gap:32px">
+      <article style="display:flex;flex-direction:column;gap:14px;border:1px solid var(--border-primary);border-radius:12px;padding:28px;background:#fff">
+        <p style="margin:0;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#0B2AEA">Public API</p>
+        <h3 style="font:600 22px var(--font-display);color:#000000;margin:0">Query readings, city by city</h3>
+        <p style="font-size:15px;line-height:1.6;color:var(--text-secondary);margin:0">The sensors.AFRICA API serves current and recent air-quality readings by city, plus pointers to historical archives — the same data behind the maps and widgets, as clean JSON.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text-secondary)">
+          <span style="display:flex;gap:9px"><span style="color:#0B2AEA">·</span>Live and recent PM2.5 / PM10 readings by city</span>
+          <span style="display:flex;gap:9px"><span style="color:#0B2AEA">·</span>Per-node sensor data across the network</span>
+          <span style="display:flex;gap:9px"><span style="color:#0B2AEA">·</span>Historical archives for long-run analysis</span>
+        </div>
+        <pre class="snippet" style="margin:4px 0 0">GET https://api.sensors.africa/v2/data/</pre>
+        <a href="https://github.com/CodeForAfrica/sensors.AFRICA/wiki/APIs" rel="noopener" style="font-size:14px;font-weight:500;margin-top:auto">API documentation →</a>
+      </article>
+      <article style="display:flex;flex-direction:column;gap:14px;border:1px solid var(--border-primary);border-radius:12px;padding:28px;background:#fff">
+        <p style="margin:0;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#0B2AEA">Archives &amp; source</p>
+        <h3 style="font:600 22px var(--font-display);color:#000000;margin:0">Download the raw record</h3>
+        <p style="font-size:15px;line-height:1.6;color:var(--text-secondary);margin:0">Historical sensor readings are archived and linked from the project wiki for bulk download, and the entire platform — API, frontend and sensor firmware ecosystem — is developed in the open on GitHub.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text-secondary)">
+          <span style="display:flex;gap:9px"><span style="color:#0B2AEA">·</span>Historical data archives, linked from the wiki</span>
+          <span style="display:flex;gap:9px"><span style="color:#0B2AEA">·</span>Open-source platform code and issue tracker</span>
+          <span style="display:flex;gap:9px"><span style="color:#0B2AEA">·</span>Wiki guides for working with the data</span>
+        </div>
+        <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:auto">
+          <a href="https://github.com/CodeForAfrica/sensors.AFRICA/wiki" rel="noopener" style="font-size:14px;font-weight:500">Wiki &amp; archives →</a>
+          <a href="https://github.com/CodeForAfrica/sensors.AFRICA" rel="noopener" style="font-size:14px;font-weight:500">GitHub repository →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LICENCE + PROVENANCE ================= -->
+<section class="cfa-section tight" id="use" style="border-bottom:1px solid var(--border-secondary)">
+  <div class="cfa-wrap">
+    <div class="cfa-section-head" style="margin-bottom:48px">
+      <p class="cfa-section-eyebrow">Using the data</p>
+      <h2 class="cfa-section-title" style="font-size:44px">Credit it, and it's yours</h2>
+      <p class="cfa-section-lead">An open project should be easy to reuse responsibly. Here's how to attribute the data — and how it's produced in the first place.</p>
+    </div>
+    <div class="grid-2" style="gap:64px">
+      <div style="display:flex;flex-direction:column;gap:14px;padding-top:24px;border-top:2px solid #000000">
+        <h3 style="font:600 20px var(--font-display);color:#000000;margin:0">Attribution &amp; licence</h3>
+        <p style="font-size:15px;line-height:1.6;color:var(--text-secondary);margin:0">sensors.AFRICA is an open project incubated by <a href="https://codeforafrica.org/" rel="noopener">Code for Africa</a>. The data is published openly for journalists, researchers and civic watchdogs to reuse — we ask only that you credit the source. The platform software is free and open source, released under the <a href="https://github.com/CodeForAfrica/sensors.AFRICA/blob/master/LICENSE" rel="noopener">GNU GPL v3.0</a>.</p>
+        <p style="font-size:14px;line-height:1.6;color:var(--text-tertiary);margin:0;padding:14px 16px;background:var(--gray-25);border-radius:8px;border:1px solid var(--border-secondary)">Suggested credit: "Air-quality data: sensors.AFRICA, a Code for Africa project · WHO Global Platform on Air Quality &amp; Health."</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;padding-top:24px;border-top:2px solid #000000">
+        <h3 style="font:600 20px var(--font-display);color:#000000;margin:0">How the data is produced</h3>
+        <p style="font-size:15px;line-height:1.6;color:var(--text-secondary);margin:0">Readings come from low-cost, open-source sensors built on <a href="https://luftdaten.info/" rel="noopener">Luftdaten</a> technology around the SDS011 particulate sensor. Citizens host them at homes, schools and offices; each node measures the air and streams its readings to the open platform over Wi-Fi or GSM.</p>
+        <div style="display:flex;flex-direction:column">
+          <div class="spec-row" style="padding:9px 0;border-top:1px solid var(--border-secondary)"><span class="k">Sensor</span><span class="v">SDS011 (open-source Luftdaten design)</span></div>
+          <div class="spec-row" style="padding:9px 0"><span class="k">Measures</span><span class="v">PM2.5 &amp; PM10, µg/m³</span></div>
+          <div class="spec-row" style="padding:9px 0"><span class="k">Connectivity</span><span class="v">Wi-Fi or GSM</span></div>
+          <div class="spec-row" style="padding:9px 0"><span class="k">Hosted by</span><span class="v">Citizens — homes, schools, offices</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section style="background:#fff">
+  <div style="text-align:center;padding:104px 24px;max-width:760px;margin:0 auto">
+    <h2 style="font:600 clamp(32px,4.4vw,52px)/1.08 var(--font-display);letter-spacing:-0.025em;color:#000000;margin:0">The best dataset is the one you help build.</h2>
+    <p style="margin:20px auto 36px;color:var(--text-secondary);max-width:48ch;font-size:17px;line-height:1.6">Host a sensor and your street becomes a data point — open, live and citable. Or just take the data above and put it to work.</p>
+    <a class="btn primary" href="get-started.html" style="text-decoration:none">Get started — join the network <span class="arr">→</span></a>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>
